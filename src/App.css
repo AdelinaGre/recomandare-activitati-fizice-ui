@@ -1,9 +1,9 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -39,4 +39,26 @@
 
 .read-the-docs {
   color: #888;
+}
+.dashboard{
+    display: flex;
+
+    gap: 20px;
+    
+}
+.dashboard-content{
+  margin-top: 3%;
+background: #646cffaa;
+flex:1;
+border-radius: 20px;
+
+display: flex;
+gap: 1.5rem;
+margin-right: 3%;
+height: 55vh;
+padding-bottom: 4rem;
+padding-right: 2rem;
+padding-left: 2rem;
+padding-top: 2rem;
+justify-content: space-between;
 }
