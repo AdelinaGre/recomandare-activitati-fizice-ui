@@ -16,7 +16,7 @@ export default function Api_disp() {
   const [newUser, setNewUser] = useState<{ email: string; name: string; password: string }>({
     email: "",
     name: "",
-    password: "", // Inițializăm parola cu un șir gol
+    password: "",
   });
 
   useEffect(() => {
@@ -50,15 +50,11 @@ export default function Api_disp() {
         },
         body: JSON.stringify({ name: editedName }),
       });
-      
-      if (response.status === 404) {
-        throw new Error("User not found");
-      }
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      
+
       fetchData(); // Re-fetch data after successful update
       setEditingId(null);
       setEditedName("");
@@ -66,14 +62,17 @@ export default function Api_disp() {
       setError(e instanceof Error ? e.message : "Error updating user");
     }
   };
+
   const handleDelete = async (id: number) => {
     try {
       const response = await fetch(`/api/user/${id}`, {
         method: "DELETE",
       });
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+
       fetchData(); // Re-fetch data after successful delete
     } catch (e) {
       setError(e instanceof Error ? e.message : "Error deleting user");
@@ -97,10 +96,12 @@ export default function Api_disp() {
         },
         body: JSON.stringify(newUser),
       });
+
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-     fetchData(); // Re-fetch data after successful add
+
+      fetchData(); // Re-fetch data after successful add
       setNewUser({ email: "", name: "", password: "" }); // Clear input fields
     } catch (e) {
       setError(e instanceof Error ? e.message : "Error adding user");

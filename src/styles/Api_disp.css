@@ -1,5 +1,5 @@
 .styled-table {
-    width: 250%;
+    width: 170%;
    border-radius: 20px;
     border: 1px solid #ddd;
 
@@ -27,6 +27,23 @@
   
   .styled-table tbody tr:hover {
     background-color: #a387ffb9;
+    
     border-radius: 20px;
   }
-  
+  .App{
+    background: #646cffaa;
+    margin-top: 3%;
+
+    flex:1;
+    border-radius: 20px;
+    
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 3%;
+    height: 80vh;
+    padding-bottom: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    justify-content: space-between;
+  }
