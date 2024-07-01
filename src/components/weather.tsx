@@ -54,7 +54,7 @@ const WeatherWidget: React.FC<WeatherWidgetProps> = ({ location }) => {
     return (
         <div className='weather-widget'>
            { isDayTime ? <div className='sun' ></div>:<img className='moon' src={MoonSvg} />}
-            {/* {!isDayTime && <img className='moon' src={MoonSvg} />} */}
+            
             <div className='cloud-container'>
                 {cloudSize > 50 && <img className='cloud' src={CloudSvg} />}
             </div>

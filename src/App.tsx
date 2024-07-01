@@ -12,7 +12,7 @@ import './App.css'
 const App = () => {
   const [inputValue, setInputValue] = useState('London')
   const [location, setLocation] = useState('London')
-  
+
   const handleFormSubmit =(e : FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
     setLocation(inputValue)
@@ -25,15 +25,14 @@ const App = () => {
         <Sidebar />
         <div className="weather-widget-container">
           <form onSubmit={handleFormSubmit}>
-            <input type="text" value={inputValue} 
+            <input className='location-input' type="text" value={inputValue} 
             onChange={(e)=>{setInputValue(e.target.value)}}/>
-            <button type="submit">Update Location</button>
+            <button className='update-button' type="submit">Update</button>
           </form>
         <WeatherWidget location={location}/>
         </div>
         <div className="dashboard-content">
-          {/* <Content />
-          <User /> */}
+      
          <Api_disp />
         </div>
       </div>

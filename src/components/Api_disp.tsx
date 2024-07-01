@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Api_disp.css";
-
+import { Table } from "react-bootstrap"; 
 type ResultProps = {
   id: number;
   email: string;
@@ -113,7 +113,8 @@ export default function Api_disp() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{ maxHeight: "500px", 
+      overflowY: "auto" }}>
       <div className="add-user">
         <input
           type="text"
@@ -136,7 +137,7 @@ export default function Api_disp() {
           value={newUser.password}
           onChange={handleInputChange}
         />
-        <button onClick={handleAddUser}>Add User</button>
+        <button className="add-user-button" onClick={handleAddUser}>Add User</button>
       </div>
       <table className="styled-table">
         <thead>
@@ -154,7 +155,7 @@ export default function Api_disp() {
               <td>{value.email}</td>
               <td>
                 {editingId === value.id ? (
-                  <input
+                  <input className="edit-input"
                     type="text"
                     value={editedName}
                     onChange={(e) => setEditedName(e.target.value)}
@@ -166,13 +167,13 @@ export default function Api_disp() {
               <td>
                 {editingId === value.id ? (
                   <>
-                    <button onClick={() => handleUpdate(value.id)}>Save</button>
-                    <button onClick={() => setEditingId(null)}>Cancel</button>
+                    <button className="save-button" onClick={() => handleUpdate(value.id)}>Save</button>
+                    <button className="cancel-button" onClick={() => setEditingId(null)}>Cancel</button>
                   </>
                 ) : (
                   <>
-                    <button onClick={() => handleEdit(value.id, value.name)}>Edit</button>
-                    <button onClick={() => handleDelete(value.id)}>Delete</button>
+                    <button className="edit-button" onClick={() => handleEdit(value.id, value.name)}>Edit</button>
+                    <button className="delete-button" onClick={() => handleDelete(value.id)}>Delete</button>
                   </>
                 )}
               </td>

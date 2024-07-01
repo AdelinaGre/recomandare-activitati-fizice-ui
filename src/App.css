@@ -1,15 +1,14 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+
 
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+}
+form{
+  margin-top:10%;
+  margin-left:10%;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -32,7 +31,9 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
+.update-button{
+  width:35%;
+}
 .card {
   padding: 2em;
 }
@@ -43,22 +44,20 @@
 .dashboard{
     display: flex;
 
-    gap: 20px;
     
 }
-/* .dashboard-content{
-  margin-top: 3%;
+.dashboard-content{
+ margin-left:0%;
+}
+.weather-widget-container{
+  background: #484848;
+  margin-top: 1.5%;
+  margin-right:3%;
+  width:18%;
+  height: 71vh;
+  border-radius: 50px;
 
-flex:1;
-border-radius: 20px;
-
-display: flex;
-gap: 1.5rem;
-margin-right: 3%;
-height: 80vh;
-padding-bottom: 4rem;
-padding-right: 2rem;
-padding-left: 2rem;
-padding-top: 2rem;
-justify-content: space-between;
-} */
+}
+.location-input{
+  width:35%;
+}

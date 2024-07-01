@@ -1,5 +1,5 @@
 .weather-widget{
-
+top:2%;
 position:relative;
 display:flex;
 flex-direction: column;
@@ -12,6 +12,7 @@ padding:20px;
 background: linear-gradient(to bottom, #490efa 0%, #bc86f6 100%);
 color:white;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+margin-left: 6.5%;
 }
 .moon{
     margin-top: 10%;
@@ -22,7 +23,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 .sun{
     margin-top: 10%;
-    background-color:rgb(252, 206, 0);
+    background-color:orange;
     filter: drop-shadow(0 0 20px rgba(255,165,0,0.8));
     width:40%;
     height:40%;
