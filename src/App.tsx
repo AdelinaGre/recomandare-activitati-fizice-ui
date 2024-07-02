@@ -22,7 +22,7 @@ const App = () => {
           <UpBar />
       <div className="dashboard">
      
-        <Sidebar />
+        <Sidebar/> 
         <div className="weather-widget-container">
           <form onSubmit={handleFormSubmit}>
             <input className='location-input' type="text" value={inputValue} 
